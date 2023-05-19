@@ -31,6 +31,12 @@ sudo groupadd grad
 sudo groupadd ugrad
 sudo groupadd staff
 
+echo "created groups:"
+getent group grad
+getent group ugrad
+getent group staff
+
+
 # Grant staff group sudo privileges
 echo "%staff ALL=(ALL) ALL" | sudo tee /etc/sudoers.d/staff
 
